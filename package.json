@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "tsc -p tsconfig.server.json && node ./dist/index.js",
+    "build:next": "next build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "@prisma/client": "^3.10.0",
+    "express": "^4.17.3",
     "next": "12.1.0",
+    "prisma": "^3.10.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
