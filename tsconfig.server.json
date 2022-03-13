@@ -5,5 +5,5 @@
         "outDir": "./dist",
         "noEmit": false, // Next.jsはBebelを使用してTypeScriptをコンパイルするので、TSコンパイラはjsを出力しない。設定を上書きする。
     },
-    "include": ["./server"]
+    "include": ["./api"]
 }
